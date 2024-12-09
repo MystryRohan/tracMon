@@ -1,0 +1,14 @@
+.all {
+  padding: 1rem;
+  padding: 10vh 1rem;
+}
+.all-container h3 {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}

@@ -1,0 +1,11 @@
+select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: large;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+}
+.add-form {
+  height: 40vh !important;
+}
