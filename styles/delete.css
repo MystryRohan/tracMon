@@ -1,0 +1,11 @@
+@media screen and (max-width: 400px) {
+  .delete-container {
+    height: 90vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
