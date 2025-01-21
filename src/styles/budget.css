@@ -1,6 +1,7 @@
 .budget {
   height: 90vh;
-  width: 100%;
+  width: 30%;
+  margin: auto;
   padding: 1rem;
 }
 .budget h3 {
@@ -34,15 +35,8 @@
   font-size: 12px;
 }
 
-/* .ent {
-  background-color: #f5004f19;
+@media screen and (max-width: 400px) {
+  .budget {
+    width: 100%;
+  }
 }
-.travel {
-  background-color: #ffaf0019;
-}
-.rent {
-  background-color: #f9e40019;
-}
-.food {
-  background-color: #7c00fe19;
-} */

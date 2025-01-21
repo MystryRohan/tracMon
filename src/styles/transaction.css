@@ -1,4 +1,5 @@
 .transaction {
+  padding: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -22,8 +23,9 @@
 .icon {
   padding-right: 1rem;
 }
-/* .delete-btn {
-  width: 3rem;
-  height: 10vh;
-  background-color: rgb(255, 235, 235);
-} */
+
+@media screen and (max-width: 400px) {
+  .transaction {
+    padding: 0;
+  }
+}
