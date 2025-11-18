@@ -18,8 +18,8 @@ export const tTypeOpts = {
   investmentBudget: <BiCandles size={40} color="#9BEC00" />,
 };
 
-export const server = "http://localhost:5000/api/v1";
-// export const server = "https://tracmon-be.onrender.com/api/v1";
+// export const server = "http://localhost:5000/api/v1";
+export const server = "https://tracmon-be.onrender.com/api/v1";
 
 export const Context = createContext({ isAuthenticated: false });
 
