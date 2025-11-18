@@ -30,53 +30,22 @@ const Profile = () => {
         <h3>{user.name}</h3>
       </div>
       <div className="change-salary">
-        <form>
-          <div className="form-input">
-            <h5>Current Salary</h5>
-            <input type="text" placeholder={`₹${user.salary}`} disabled />
-          </div>
-          <div className="form-input">
-            <h5>Entertaiment Budget</h5>
-            <input
-              type="text"
-              placeholder={`₹${user.entertainmentBudget + user.entertainment}`}
-              disabled
-            />
-          </div>
-          <div className="form-input">
-            <h5>Food Budget</h5>
-            <input
-              type="text"
-              placeholder={`₹${user.foodBudget + user.food}`}
-              disabled
-            />
-          </div>
-          <div className="form-input">
-            <h5>Investment Budget</h5>
-            <input
-              type="text"
-              placeholder={`₹${user.investmentBudget + user.investment}`}
-              disabled
-            />
-          </div>
-          <div className="form-input">
-            <h5>Rent Budget</h5>
-            <input
-              type="text"
-              placeholder={`₹${user.rentBudget + user.rent}`}
-              disabled
-            />
-          </div>
-          <div className="form-input">
-            <h5>Travel Budget</h5>
-            <input
-              type="text"
-              placeholder={`₹${user.travelBudget + user.travel}`}
-              disabled
-            />
-          </div>
-        </form>
+        <Block name={"Salary"} budget={user.salary} exp={0} />
+        <Block
+          name={"Entertainment"}
+          budget={user.entertainmentBudget}
+          exp={user.entertainment}
+        />
+        <Block name={"Food"} budget={user.foodBudget} exp={user.food} />
+        <Block
+          name={"Investment"}
+          budget={user.investmentBudget}
+          exp={user.investment}
+        />
+        <Block name={"Rent"} budget={user.rentBudget} exp={user.rent} />
+        <Block name={"Travel"} budget={user.travelBudget} exp={user.travel} />
       </div>
+
       <div className="logout">
         <button onClick={logoutHandler}>Logout</button>
       </div>
@@ -85,3 +54,31 @@ const Profile = () => {
 };
 
 export default Profile;
+
+const Block = ({ name, budget, exp }) => {
+  const percent = (exp / (exp + budget)) * 100;
+  let bgColor = "#4bf534ff";
+
+  if (percent < 50) {
+    bgColor = "#4bf534ff";
+  } else if (percent >= 50 && percent < 80) {
+    bgColor = "#f5a937ff";
+  } else {
+    bgColor = "#fa3f3fff";
+  }
+  return (
+    <div className="budget-block-wrapper">
+      <div className="profile-budget-blocks">
+        <div
+          className="fill-block"
+          style={{
+            height: `${percent}%`,
+            backgroundColor: bgColor,
+          }}
+        ></div>
+        <p>{`₹${budget + exp}`}</p>
+      </div>
+      <h6>{name == "Salary" ? "Salary" : `${name} Budget`}</h6>
+    </div>
+  );
+};

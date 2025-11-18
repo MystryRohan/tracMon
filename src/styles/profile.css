@@ -28,7 +28,7 @@
 .pfp-container h3 {
   text-transform: capitalize;
 }
-.form-input {
+/* .form-input {
   margin: 1rem 0;
 }
 .form-input h5 {
@@ -38,6 +38,44 @@
   padding: 10px 15px;
   border-radius: 12px;
   font-size: 1rem;
+} */
+.change-salary {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px 30px;
+}
+.budget-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-budget-blocks {
+  position: relative;
+  width: 10rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0666eb11;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.profile-budget-blocks p {
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+.budget-block-wrapper h6 {
+  text-transform: capitalize;
+}
+.fill-block {
+  position: absolute;
+  background-color: #0666ebc4;
+  width: 100%;
+  bottom: 0;
 }
 .logout button {
   padding: 10px 15px;
@@ -47,7 +85,6 @@
   background-color: #f82525;
   color: white;
 }
-
 @media screen and (max-width: 450px) {
   .profile-page {
     /* height: 90vh; */
@@ -80,13 +117,13 @@
   .pfp-container h3 {
     text-transform: capitalize;
   }
-  .form-input {
+  .change-salary {
     margin: 1rem 0;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .change-salary input {
-    padding: 10px 15px;
-    border-radius: 12px;
-    font-size: 1rem;
+  .profile-budget-blocks {
+    width: 8rem;
+    height: 10rem;
   }
   .logout button {
     padding: 10px 15px;
