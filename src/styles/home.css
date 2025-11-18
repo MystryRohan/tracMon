@@ -84,7 +84,7 @@
   font-size: 13px;
   color: #0666eb;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .home-container {
     padding: 1rem;
   }

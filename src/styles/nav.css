@@ -20,7 +20,7 @@
 .active a {
   color: #0666eb;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .nav-p {
     font-size: 12px;
   }

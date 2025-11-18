@@ -35,7 +35,7 @@
   font-size: 12px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .budget {
     width: 100%;
   }
